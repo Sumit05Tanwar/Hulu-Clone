@@ -1,12 +1,10 @@
 import Head from "next/head";
 import Header from "../Components/Header";
 import Nav from "../Components/Nav";
-import Result from "../Components/Result";
+import Results from "../Components/Results";
 import requests from "../utils/requests";
 
-export default function Home(props) {
-  console.log(props);
-  console.log(props);
+export default function Home({ results }) {
   return (
     <div>
       <Head>
@@ -16,7 +14,7 @@ export default function Home(props) {
       </Head>
       <Header />
       <Nav />
-      <Result />
+      <Results results={results} />
     </div>
   );
 }
